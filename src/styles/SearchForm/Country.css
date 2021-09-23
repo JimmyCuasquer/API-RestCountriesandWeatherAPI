@@ -3,3 +3,15 @@
     text-transform: uppercase;
     
 }
+back{
+    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    width: 50%;
+    margin: auto;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: green;
+    border-radius: 5px;
+
+}

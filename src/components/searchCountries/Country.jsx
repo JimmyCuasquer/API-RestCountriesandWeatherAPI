@@ -1,5 +1,5 @@
 import React from "react";
-import { Card,Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import {Link} from "react-router-dom"
 import "../../styles/SearchForm/Country.css"
 const Country = props =>{
@@ -14,8 +14,8 @@ return(
         <Card.Title className="name font-family">{name}</Card.Title>  
         <Card.Title> La cantidad de Habitantes en {name} es de {population}</Card.Title>
     </Card.Body>
-    <Button variant="danger">
-        <Link to={`/details/${capital}`}> Ver el clima de tu pais</Link></Button>
+    
+        <Link className="back" to={`/details/${capital}`}> Ver el clima de tu pais</Link>
 </Card>
 
     </div>
