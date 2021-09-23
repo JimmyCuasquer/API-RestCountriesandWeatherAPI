@@ -8,7 +8,7 @@ const Home = () =>{
     //API
     const fetchDataApi = async() =>{
         try {
-            const API = "https://restcountries.eu/rest/v2/all";
+            const API = "https://restcountries.com/v2/all";
             const response = await fetch(API)
             const data = await response.json();
             setData(data)
@@ -29,7 +29,7 @@ const Home = () =>{
             data.length> 0 && data.map((valor,i) => 
             <ListFlags 
                 name={valor.name}
-                flag={valor.flag}
+                flags={valor.flags[0]}
                 key={i}
                 data={data}
             />

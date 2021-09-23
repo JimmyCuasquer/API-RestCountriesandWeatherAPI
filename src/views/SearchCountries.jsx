@@ -15,7 +15,7 @@ const SearchCountries = props => {
         e.preventDefault()
             setLoadig(true)    
         try {
-            const API = `https://restcountries.eu/rest/v2/name/${name}?fullText=true`
+            const API = `https://restcountries.com/v2/name/${name}?fullText=true`
             const response = await fetch(API)
             const result = await response.json()
             if (result.status){
@@ -49,7 +49,7 @@ return(
             ):data.length > 0 && !loadig ? data.map((content, i) => (
                 <Country
                 name={content.name}
-                flag={content.flag}
+                flags={content.flags[0]}
                 population={content.population}
                 code={content.alpha2Code}
                 region={content.region}
